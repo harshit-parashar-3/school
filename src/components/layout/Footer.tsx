@@ -15,11 +15,12 @@ const programLinks = [
   { name: "Summer Programs", path: "/academics" },
 ];
 
+// Update these URLs with your actual social media profiles
 const socialLinks = [
-  { icon: Facebook, href: "#", label: "Facebook" },
-  { icon: Twitter, href: "#", label: "Twitter" },
-  { icon: Instagram, href: "#", label: "Instagram" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
+  { icon: Facebook, href: "https://www.facebook.com/prestigeacademy", label: "Facebook" },
+  { icon: Twitter, href: "https://twitter.com/prestigeacademy", label: "Twitter" },
+  { icon: Instagram, href: "https://www.instagram.com/prestigeacademy", label: "Instagram" },
+  { icon: Linkedin, href: "https://www.linkedin.com/school/prestige-academy", label: "LinkedIn" },
 ];
 
 export function Footer() {
@@ -48,8 +49,10 @@ export function Footer() {
                 <a
                   key={social.label}
                   href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label={social.label}
-                  className="p-2 rounded-lg bg-primary-foreground/10 hover:bg-accent hover:text-accent-foreground transition-colors"
+                  className="p-2 rounded-lg bg-primary-foreground/10 hover:bg-accent hover:text-accent-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                 >
                   <social.icon className="h-5 w-5" />
                 </a>
@@ -125,12 +128,12 @@ export function Footer() {
               © {new Date().getFullYear()} Prestige Academy. All rights reserved.
             </p>
             <div className="flex gap-6 text-sm">
-              <a href="#" className="text-primary-foreground/60 hover:text-accent transition-colors">
+              <Link to="/privacy" className="text-primary-foreground/60 hover:text-accent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm px-2 py-1">
                 Privacy Policy
-              </a>
-              <a href="#" className="text-primary-foreground/60 hover:text-accent transition-colors">
+              </Link>
+              <Link to="/terms" className="text-primary-foreground/60 hover:text-accent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm px-2 py-1">
                 Terms of Service
-              </a>
+              </Link>
             </div>
           </div>
         </div>

@@ -33,7 +33,7 @@ export function CTA() {
                 Start Your Application <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
+            <Button asChild variant="outline" size="lg" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/20 bg-primary-foreground/10">
               <Link to="/contact">
                 <Calendar className="mr-2 h-5 w-5" /> Schedule a Visit
               </Link>

@@ -38,7 +38,7 @@ export function Testimonials() {
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={testimonial.author}
@@ -46,7 +46,7 @@ export function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-card p-8 rounded-xl border border-border relative"
+              className="bg-card p-8 rounded-xl border border-border hover:border-accent/50 hover:shadow-lg transition-all duration-300 relative"
             >
               <Quote className="h-10 w-10 text-accent/20 absolute top-6 right-6" />
               <p className="text-foreground italic mb-6 leading-relaxed relative z-10">

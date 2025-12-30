@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="32" fill="#1E3A5F"/>
+
+  <!-- Graduation cap in gold -->
+  <g transform="translate(12, 18)">
+    <!-- Cap top (mortarboard) -->
+    <path d="M 20 10 L 38 16 L 20 22 L 2 16 Z" fill="#D4AF37"/>
+
+    <!-- Cap side panels -->
+    <path d="M 20 22 L 20 28 L 12 25 L 12 19 Z" fill="#B8941F" opacity="0.8"/>
+    <path d="M 20 22 L 20 28 L 28 25 L 28 19 Z" fill="#ECC94B" opacity="0.8"/>
+
+    <!-- Tassel -->
+    <circle cx="36" cy="14" r="1.5" fill="#D4AF37"/>
+    <line x1="36" y1="15.5" x2="36" y2="20" stroke="#D4AF37" stroke-width="1"/>
+    <circle cx="36" cy="20" r="1.5" fill="#D4AF37"/>
+  </g>
+</svg>

@@ -236,14 +236,15 @@ const Academics = () => {
               <img
                 src={scienceLab}
                 alt="Science Laboratory"
+                loading="lazy"
                 className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 to-transparent" />
               <div className="absolute bottom-6 left-6">
-                <h3 className="font-display text-2xl font-bold text-card-foreground mb-2" style={{ color: 'white' }}>
+                <h3 className="font-display text-2xl font-bold text-primary-foreground mb-2">
                   Science Laboratories
                 </h3>
-                <p className="text-card-foreground/80" style={{ color: 'rgba(255,255,255,0.8)' }}>
+                <p className="text-primary-foreground/80">
                   Advanced labs for biology, chemistry, and physics
                 </p>
               </div>
@@ -259,14 +260,15 @@ const Academics = () => {
               <img
                 src={artClassroom}
                 alt="Art Studios"
+                loading="lazy"
                 className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 to-transparent" />
               <div className="absolute bottom-6 left-6">
-                <h3 className="font-display text-2xl font-bold text-card-foreground mb-2" style={{ color: 'white' }}>
+                <h3 className="font-display text-2xl font-bold text-primary-foreground mb-2">
                   Art Studios
                 </h3>
-                <p className="text-card-foreground/80" style={{ color: 'rgba(255,255,255,0.8)' }}>
+                <p className="text-primary-foreground/80">
                   Creative spaces for visual arts and design
                 </p>
               </div>

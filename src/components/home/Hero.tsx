@@ -61,7 +61,7 @@ export function Hero() {
                 Apply Now <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="border-primary-foreground/50 text-primary-foreground hover:bg-primary-foreground/20 bg-primary-foreground/10 backdrop-blur-sm">
+            <Button asChild variant="outline" size="lg" className="border-primary text-primary hover:bg-primary/10 bg-card/80 backdrop-blur-sm">
               <Link to="/about">
                 <Play className="mr-2 h-5 w-5" /> Virtual Tour
               </Link>

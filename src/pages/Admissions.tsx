@@ -33,13 +33,27 @@ const requirements = [
   { grade: "High School (9-12)", items: ["Application Form", "Transcripts", "Teacher Recommendations (2)", "Student Essay", "Interview", "Standardized Test Scores"] },
 ];
 
+// Calculate current academic year dynamically
+const getCurrentAcademicYear = () => {
+  const now = new Date();
+  const currentYear = now.getFullYear();
+  const currentMonth = now.getMonth();
+
+  // Academic year runs Sept-Aug, so if we're in Sept-Dec, use current year
+  // If Jan-Aug, we're in the second half of the academic year
+  return currentMonth >= 8 ? currentYear : currentYear - 1;
+};
+
+const academicYear = getCurrentAcademicYear();
+const nextYear = academicYear + 1;
+
 const dates = [
-  { event: "Applications Open", date: "September 1, 2024" },
-  { event: "Early Decision Deadline", date: "November 15, 2024" },
-  { event: "Regular Decision Deadline", date: "January 15, 2025" },
-  { event: "Financial Aid Deadline", date: "February 1, 2025" },
-  { event: "Admission Decisions", date: "March 15, 2025" },
-  { event: "Enrollment Deposit Due", date: "April 15, 2025" },
+  { event: "Applications Open", date: `September 1, ${academicYear}` },
+  { event: "Early Decision Deadline", date: `November 15, ${academicYear}` },
+  { event: "Regular Decision Deadline", date: `January 15, ${nextYear}` },
+  { event: "Financial Aid Deadline", date: `February 1, ${nextYear}` },
+  { event: "Admission Decisions", date: `March 15, ${nextYear}` },
+  { event: "Enrollment Deposit Due", date: `April 15, ${nextYear}` },
 ];
 
 const Admissions = () => {
@@ -68,7 +82,7 @@ const Admissions = () => {
               <Button size="lg" className="bg-accent text-accent-foreground hover:bg-gold-light shadow-gold font-semibold">
                 Start Application <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button variant="outline" size="lg" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
+              <Button variant="outline" size="lg" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/20 bg-primary-foreground/10">
                 <Download className="mr-2 h-5 w-5" /> Download Brochure
               </Button>
             </div>
@@ -257,7 +271,7 @@ const Admissions = () => {
                   Contact Admissions
                 </Link>
               </Button>
-              <Button variant="outline" size="lg" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
+              <Button variant="outline" size="lg" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/20 bg-primary-foreground/10">
                 <Calendar className="mr-2 h-5 w-5" /> Schedule a Tour
               </Button>
             </div>

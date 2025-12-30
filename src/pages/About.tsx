@@ -117,11 +117,12 @@ const About = () => {
               <img
                 src={studentsLibrary}
                 alt="Students collaborating in library"
+                loading="lazy"
                 className="rounded-xl shadow-xl"
               />
-              <div className="absolute -bottom-6 -left-6 bg-accent p-6 rounded-xl shadow-lg">
-                <p className="font-display text-3xl font-bold text-accent-foreground">50+</p>
-                <p className="text-accent-foreground/80">Years of Excellence</p>
+              <div className="absolute -bottom-3 -left-3 sm:-bottom-6 sm:-left-6 bg-accent p-4 sm:p-6 rounded-xl shadow-lg">
+                <p className="font-display text-2xl sm:text-3xl font-bold text-accent-foreground">50+</p>
+                <p className="text-sm sm:text-base text-accent-foreground/80">Years of Excellence</p>
               </div>
             </motion.div>
           </div>

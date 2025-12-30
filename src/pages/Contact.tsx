@@ -1,12 +1,7 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
-import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import { useToast } from "@/hooks/use-toast";
 
 const contactInfo = [
   {
@@ -39,28 +34,10 @@ const departments = [
   { name: "Athletics Department", email: "athletics@prestigeacademy.edu" },
 ];
 
+// Replace this URL with your actual Google Form URL
+const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform";
+
 const Contact = () => {
-  const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    subject: "",
-    message: "",
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for contacting us. We'll respond within 24-48 hours.",
-    });
-    setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
 
   return (
     <Layout>
@@ -148,83 +125,75 @@ const Contact = () => {
                   Send Us a Message
                 </h2>
                 <p className="text-muted-foreground mb-8">
-                  Fill out the form below and we'll get back to you within 24-48 hours.
+                  Fill out our contact form and we'll get back to you within 24-48 hours.
                 </p>
 
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <Label htmlFor="name">Full Name *</Label>
-                      <Input
-                        id="name"
-                        name="name"
-                        placeholder="John Smith"
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                        className="bg-background"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="email">Email Address *</Label>
-                      <Input
-                        id="email"
-                        name="email"
-                        type="email"
-                        placeholder="john@example.com"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                        className="bg-background"
-                      />
+                {/* OPTION 1: Button to open Google Form in new tab (Recommended) */}
+                <div className="space-y-6">
+                  <div className="bg-secondary p-8 rounded-lg text-center">
+                    <div className="max-w-md mx-auto">
+                      <Mail className="h-16 w-16 text-accent mx-auto mb-4" />
+                      <h3 className="font-display text-xl font-semibold text-foreground mb-3">
+                        Contact Form
+                      </h3>
+                      <p className="text-muted-foreground mb-6">
+                        Click the button below to fill out our contact form. Your message will be sent directly to our admissions team.
+                      </p>
+                      <Button
+                        asChild
+                        size="lg"
+                        className="bg-accent text-accent-foreground hover:bg-gold-light shadow-gold font-semibold w-full sm:w-auto"
+                      >
+                        <a
+                          href={GOOGLE_FORM_URL}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <ExternalLink className="mr-2 h-5 w-5" /> Open Contact Form
+                        </a>
+                      </Button>
                     </div>
                   </div>
 
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <Label htmlFor="phone">Phone Number</Label>
-                      <Input
-                        id="phone"
-                        name="phone"
-                        type="tel"
-                        placeholder="(123) 456-7890"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        className="bg-background"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="subject">Subject *</Label>
-                      <Input
-                        id="subject"
-                        name="subject"
-                        placeholder="Inquiry about admissions"
-                        value={formData.subject}
-                        onChange={handleChange}
-                        required
-                        className="bg-background"
-                      />
+                  {/* Alternative contact methods */}
+                  <div className="pt-6 border-t border-border">
+                    <p className="text-sm text-muted-foreground text-center mb-4">
+                      Or contact us directly via:
+                    </p>
+                    <div className="grid sm:grid-cols-2 gap-4">
+                      <a
+                        href="mailto:info@prestigeacademy.edu"
+                        className="flex items-center justify-center gap-2 p-3 rounded-lg bg-secondary hover:bg-secondary/80 transition-colors text-foreground"
+                      >
+                        <Mail className="h-4 w-4 text-accent" />
+                        <span className="text-sm">info@prestigeacademy.edu</span>
+                      </a>
+                      <a
+                        href="tel:+11234567890"
+                        className="flex items-center justify-center gap-2 p-3 rounded-lg bg-secondary hover:bg-secondary/80 transition-colors text-foreground"
+                      >
+                        <Phone className="h-4 w-4 text-accent" />
+                        <span className="text-sm">(123) 456-7890</span>
+                      </a>
                     </div>
                   </div>
+                </div>
 
-                  <div className="space-y-2">
-                    <Label htmlFor="message">Message *</Label>
-                    <Textarea
-                      id="message"
-                      name="message"
-                      placeholder="Tell us how we can help you..."
-                      value={formData.message}
-                      onChange={handleChange}
-                      required
-                      rows={6}
-                      className="bg-background resize-none"
-                    />
-                  </div>
-
-                  <Button type="submit" size="lg" className="bg-accent text-accent-foreground hover:bg-gold-light shadow-gold font-semibold w-full md:w-auto">
-                    <Send className="mr-2 h-5 w-5" /> Send Message
-                  </Button>
-                </form>
+                {/* OPTION 2: Embedded Google Form (Uncomment to use instead of button)
+                <div className="w-full" style={{ minHeight: "800px" }}>
+                  <iframe
+                    src={GOOGLE_FORM_URL}
+                    width="100%"
+                    height="800"
+                    frameBorder="0"
+                    marginHeight={0}
+                    marginWidth={0}
+                    className="rounded-lg"
+                  >
+                    Loading…
+                  </iframe>
+                </div>
+                */}
               </div>
             </motion.div>
           </div>
