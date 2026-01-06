@@ -1,14 +1,16 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, GraduationCap } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.png";
 
 const navLinks = [
   { name: "Home", path: "/" },
   { name: "About", path: "/about" },
   { name: "Academics", path: "/academics" },
   { name: "Admissions", path: "/admissions" },
+  { name: "Album", path: "/album" },
   { name: "Contact", path: "/contact" },
 ];
 
@@ -22,12 +24,14 @@ export function Navbar() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <div className="p-2 rounded-lg bg-primary group-hover:bg-navy-light transition-colors">
-              <GraduationCap className="h-6 w-6 text-primary-foreground" />
-            </div>
+            <img
+              src={logo}
+              alt="S.D. Convent High School Logo"
+              className="h-14 w-14 object-contain transition-transform group-hover:scale-105"
+            />
             <div>
               <span className="font-display text-xl font-bold text-foreground">
-                Prestige Academy
+                S.D. Convent High School
               </span>
               <span className="block text-xs text-muted-foreground">
                 Excellence in Education

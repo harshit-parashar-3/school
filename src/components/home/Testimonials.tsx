@@ -3,7 +3,7 @@ import { Quote } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "Prestige Academy gave my daughter the confidence and skills to pursue her dreams. She's now studying engineering at MIT.",
+    quote: "S.D. Convent High School gave my daughter the confidence and skills to pursue her dreams. She's excelling in her higher studies.",
     author: "Sarah Mitchell",
     role: "Parent, Class of 2022",
   },

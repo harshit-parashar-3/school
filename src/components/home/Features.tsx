@@ -52,7 +52,7 @@ export function Features() {
             A Complete Education for Tomorrow's Leaders
           </h2>
           <p className="text-muted-foreground text-lg">
-            At Prestige Academy, we believe in developing the whole student through 
+            At S.D. Convent High School, we believe in developing the whole student through
             academics, athletics, arts, and character education.
           </p>
         </motion.div>

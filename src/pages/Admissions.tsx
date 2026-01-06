@@ -23,7 +23,7 @@ const steps = [
   {
     number: "04",
     title: "Decision & Enrollment",
-    description: "Receive your admission decision and complete enrollment to officially join the Prestige Academy family.",
+    description: "Receive your admission decision and complete enrollment to officially join the S.D. Convent High School family.",
   },
 ];
 
@@ -75,8 +75,8 @@ const Admissions = () => {
               Join Our Community
             </h1>
             <p className="text-lg text-primary-foreground/90 leading-relaxed mb-8">
-              We welcome students who are curious, motivated, and ready to embrace 
-              the challenges and opportunities of a Prestige Academy education.
+              We welcome students who are curious, motivated, and ready to embrace
+              the challenges and opportunities of a S.D. Convent High School education.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button size="lg" className="bg-accent text-accent-foreground hover:bg-gold-light shadow-gold font-semibold">

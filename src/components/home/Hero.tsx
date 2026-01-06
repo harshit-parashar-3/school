@@ -11,7 +11,7 @@ export function Hero() {
       <div className="absolute inset-0">
         <img
           src={heroCampus}
-          alt="Prestige Academy Campus"
+          alt="S.D. Convent High School Campus"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-hero-gradient opacity-80" />
@@ -46,8 +46,8 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg md:text-xl text-primary-foreground/90 mb-8 leading-relaxed"
           >
-            For over 50 years, Prestige Academy has been shaping future leaders 
-            through academic rigor, creative expression, and character development.
+            S.D. Convent High School is shaping future leaders through academic rigor,
+            creative expression, and character development.
           </motion.p>
 
           <motion.div

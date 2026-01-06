@@ -21,7 +21,7 @@ export function CTA() {
           className="text-center max-w-3xl mx-auto"
         >
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground mb-6">
-            Begin Your Journey at Prestige Academy
+            Begin Your Journey at S.D. Convent High School
           </h2>
           <p className="text-lg md:text-xl text-primary-foreground/90 mb-8">
             Join a community of scholars, athletes, and artists. Applications for 

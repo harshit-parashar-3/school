@@ -26,21 +26,29 @@ const values = [
   },
 ];
 
+const principal = {
+  name: "Mrs. Sunita Sharma",
+  role: "Principal",
+  qualifications: "M.A., B.Ed.",
+  experience: "25+ years in educational leadership",
+  message: "At S.D. Convent High School, we believe in nurturing not just academic excellence but also character, creativity, and compassion. Our mission is to provide a holistic education that prepares students to face the challenges of tomorrow with confidence and integrity. We are committed to creating a safe, inclusive, and inspiring environment where every child can discover their potential and achieve their dreams.",
+};
+
 const leadership = [
   {
-    name: "Dr. Elizabeth Warren",
-    role: "Head of School",
-    description: "With 25 years in education, Dr. Warren leads with a vision of inclusive excellence.",
+    name: "Mr. Rajesh Kumar",
+    role: "Vice Principal",
+    description: "With 20 years of experience, Mr. Kumar oversees academic programs and curriculum development.",
   },
   {
-    name: "Michael Thompson",
-    role: "Dean of Academics",
-    description: "A former Harvard professor, Mr. Thompson oversees our rigorous academic programs.",
+    name: "Mrs. Priya Verma",
+    role: "Head of Academics",
+    description: "Mrs. Verma leads our academic initiatives and ensures excellence in teaching methodology.",
   },
   {
-    name: "Jennifer Martinez",
-    role: "Director of Admissions",
-    description: "Ms. Martinez ensures every prospective family receives personalized guidance.",
+    name: "Mr. Amit Singh",
+    role: "Director of Activities",
+    description: "Mr. Singh manages extracurricular programs and student development activities.",
   },
 ];
 
@@ -63,8 +71,8 @@ const About = () => {
               A Legacy of Academic Excellence
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Founded in 1965, Prestige Academy has been at the forefront of educational 
-              innovation, preparing students for success in an ever-changing world.
+              S.D. Convent High School has been at the forefront of educational innovation,
+              preparing students for success in an ever-changing world.
             </p>
           </motion.div>
         </div>
@@ -84,25 +92,24 @@ const About = () => {
                 Our Story
               </span>
               <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mt-4 mb-6">
-                Five Decades of Shaping Future Leaders
+                Shaping Future Leaders
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  What began as a small private school with 50 students has grown into 
-                  one of the nation's most respected educational institutions. Our founders 
-                  believed that every child deserves access to exceptional education, and 
-                  that belief continues to guide us today.
+                  S.D. Convent High School has grown into one of the region's most respected
+                  educational institutions. Our founders believed that every child deserves
+                  access to exceptional education, and that belief continues to guide us today.
                 </p>
                 <p>
-                  Over the years, we've expanded our campus, added new programs, and 
-                  welcomed students from around the world. Yet our core mission remains 
-                  unchanged: to nurture curious minds and develop well-rounded individuals 
+                  Over the years, we've expanded our campus, added new programs, and
+                  welcomed students from across the district. Our core mission remains
+                  unchanged: to nurture curious minds and develop well-rounded individuals
                   ready to make a positive impact on society.
                 </p>
                 <p>
-                  Today, our alumni include leaders in business, science, arts, and public 
-                  service. They carry with them the values and knowledge instilled during 
-                  their time at Prestige Academy.
+                  Today, our alumni include leaders in business, science, arts, and public
+                  service. They carry with them the values and knowledge instilled during
+                  their time at S.D. Convent High School.
                 </p>
               </div>
             </motion.div>
@@ -121,8 +128,8 @@ const About = () => {
                 className="rounded-xl shadow-xl"
               />
               <div className="absolute -bottom-3 -left-3 sm:-bottom-6 sm:-left-6 bg-accent p-4 sm:p-6 rounded-xl shadow-lg">
-                <p className="font-display text-2xl sm:text-3xl font-bold text-accent-foreground">50+</p>
-                <p className="text-sm sm:text-base text-accent-foreground/80">Years of Excellence</p>
+                <p className="font-display text-2xl sm:text-3xl font-bold text-accent-foreground">Excellence</p>
+                <p className="text-sm sm:text-base text-accent-foreground/80">In Education</p>
               </div>
             </motion.div>
           </div>
@@ -205,8 +212,59 @@ const About = () => {
         </div>
       </section>
 
-      {/* Leadership */}
+      {/* Principal's Message */}
       <section className="py-24 bg-secondary">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center max-w-3xl mx-auto mb-16"
+          >
+            <span className="text-accent font-medium uppercase tracking-wider text-sm">
+              Principal's Message
+            </span>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mt-4">
+              A Message from Our Principal
+            </h2>
+          </motion.div>
+
+          <div className="max-w-5xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="bg-card p-8 md:p-12 rounded-2xl border border-border shadow-lg"
+            >
+              <div className="flex flex-col md:flex-row gap-8 items-center md:items-start mb-8">
+                <div className="w-32 h-32 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+                  <span className="font-display text-4xl text-primary-foreground font-bold">
+                    {principal.name.split(" ").slice(-1)[0][0]}
+                  </span>
+                </div>
+                <div className="text-center md:text-left">
+                  <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-2">
+                    {principal.name}
+                  </h3>
+                  <p className="text-accent font-semibold text-lg mb-1">{principal.role}</p>
+                  <p className="text-muted-foreground text-sm">{principal.qualifications}</p>
+                  <p className="text-muted-foreground text-sm">{principal.experience}</p>
+                </div>
+              </div>
+              <div className="relative pl-6 border-l-4 border-accent">
+                <p className="text-muted-foreground leading-relaxed text-lg italic">
+                  "{principal.message}"
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Leadership Team */}
+      <section className="py-24 bg-background">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

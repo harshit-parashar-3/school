@@ -41,7 +41,7 @@ const Terms = () => {
               className="mb-12"
             >
               <p className="text-muted-foreground leading-relaxed mb-4">
-                Welcome to Prestige Academy. These Terms of Service govern your use of our website
+                Welcome to S.D. Convent High School. These Terms of Service govern your use of our website
                 and services. By accessing or using our website, you agree to be bound by these terms.
                 If you do not agree to these terms, please do not use our website.
               </p>
@@ -129,7 +129,7 @@ const Terms = () => {
                   content is strictly prohibited without our express written permission.
                 </p>
                 <p>
-                  All trademarks, service marks, and trade names are proprietary to Prestige Academy
+                  All trademarks, service marks, and trade names are proprietary to S.D. Convent High School
                   or other respective owners that have granted us the right and license to use such marks.
                 </p>
               </div>
@@ -154,7 +154,7 @@ const Terms = () => {
                 </p>
                 <p>
                   Submission of an application does not guarantee admission. All admissions decisions
-                  are at the sole discretion of Prestige Academy and are based on multiple factors
+                  are at the sole discretion of S.D. Convent High School and are based on multiple factors
                   including but not limited to academic performance, recommendations, and available capacity.
                 </p>
                 <p>
@@ -238,7 +238,7 @@ const Terms = () => {
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  To the fullest extent permitted by law, Prestige Academy shall not be liable for any
+                  To the fullest extent permitted by law, S.D. Convent High School shall not be liable for any
                   indirect, incidental, special, consequential, or punitive damages, or any loss of
                   profits or revenues, whether incurred directly or indirectly, or any loss of data,
                   use, goodwill, or other intangible losses resulting from:
@@ -264,7 +264,7 @@ const Terms = () => {
               </h2>
               <p className="text-muted-foreground leading-relaxed">
                 Our website may contain links to third-party websites that are not owned or controlled
-                by Prestige Academy. We have no control over, and assume no responsibility for, the
+                by S.D. Convent High School. We have no control over, and assume no responsibility for, the
                 content, privacy policies, or practices of any third-party websites. You acknowledge
                 and agree that we shall not be responsible or liable for any damage or loss caused by
                 use of or reliance on any such content available on or through any such websites.
@@ -350,9 +350,9 @@ const Terms = () => {
                 If you have any questions about these Terms of Service, please contact us:
               </p>
               <div className="space-y-2 text-muted-foreground">
-                <p><strong>Email:</strong> legal@prestigeacademy.edu</p>
+                <p><strong>Email:</strong> legal@sdconvent.edu</p>
                 <p><strong>Phone:</strong> (123) 456-7890</p>
-                <p><strong>Mail:</strong> Prestige Academy, 123 Academic Drive, Cambridge, MA 02138</p>
+                <p><strong>Mail:</strong> S.D. Convent High School, Rajpoot Colony Harpalpur, District Chhatarpur, M.P. 471111</p>
               </div>
             </motion.div>
           </div>

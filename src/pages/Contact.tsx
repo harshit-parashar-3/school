@@ -7,7 +7,7 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Address",
-    content: "123 Academic Drive\nCambridge, MA 02138",
+    content: "Rajpoot Colony Harpalpur\nDistrict Chhatarpur, M.P. 471111",
   },
   {
     icon: Phone,
@@ -17,7 +17,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    content: "info@prestigeacademy.edu",
+    content: "info@sdconvent.edu",
   },
   {
     icon: Clock,
@@ -27,11 +27,11 @@ const contactInfo = [
 ];
 
 const departments = [
-  { name: "General Inquiries", email: "info@prestigeacademy.edu" },
-  { name: "Admissions Office", email: "admissions@prestigeacademy.edu" },
-  { name: "Academic Affairs", email: "academics@prestigeacademy.edu" },
-  { name: "Financial Aid", email: "financialaid@prestigeacademy.edu" },
-  { name: "Athletics Department", email: "athletics@prestigeacademy.edu" },
+  { name: "General Inquiries", email: "info@sdconvent.edu" },
+  { name: "Admissions Office", email: "admissions@sdconvent.edu" },
+  { name: "Academic Affairs", email: "academics@sdconvent.edu" },
+  { name: "Financial Aid", email: "financialaid@sdconvent.edu" },
+  { name: "Athletics Department", email: "athletics@sdconvent.edu" },
 ];
 
 // Replace this URL with your actual Google Form URL
@@ -57,7 +57,7 @@ const Contact = () => {
               Get in Touch
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Have questions about Prestige Academy? We're here to help. 
+              Have questions about S.D. Convent High School? We're here to help.
               Reach out to us and we'll respond as soon as possible.
             </p>
           </motion.div>
@@ -162,11 +162,11 @@ const Contact = () => {
                     </p>
                     <div className="grid sm:grid-cols-2 gap-4">
                       <a
-                        href="mailto:info@prestigeacademy.edu"
+                        href="mailto:info@sdconvent.edu"
                         className="flex items-center justify-center gap-2 p-3 rounded-lg bg-secondary hover:bg-secondary/80 transition-colors text-foreground"
                       >
                         <Mail className="h-4 w-4 text-accent" />
-                        <span className="text-sm">info@prestigeacademy.edu</span>
+                        <span className="text-sm">info@sdconvent.edu</span>
                       </a>
                       <a
                         href="tel:+11234567890"
@@ -229,10 +229,10 @@ const Contact = () => {
               <div className="text-center p-8">
                 <MapPin className="h-16 w-16 text-accent mx-auto mb-4" />
                 <h3 className="font-display text-xl font-semibold text-foreground mb-2">
-                  123 Academic Drive, Cambridge, MA 02138
+                  Rajpoot Colony Harpalpur, District Chhatarpur, M.P. 471111
                 </h3>
                 <p className="text-muted-foreground mb-6">
-                  Located in the heart of Cambridge, just minutes from Harvard Square
+                  Located in Harpalpur, District Chhatarpur, Madhya Pradesh
                 </p>
                 <Button variant="outline" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground">
                   Get Directions

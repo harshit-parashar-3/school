@@ -42,7 +42,7 @@ const Privacy = () => {
               className="mb-12"
             >
               <p className="text-muted-foreground leading-relaxed mb-4">
-                At Prestige Academy, we are committed to protecting the privacy and security of your
+                At S.D. Convent High School, we are committed to protecting the privacy and security of your
                 personal information. This Privacy Policy explains how we collect, use, disclose, and
                 safeguard your information when you visit our website or engage with our services.
               </p>
@@ -223,7 +223,7 @@ const Privacy = () => {
                   <li><strong>Restriction:</strong> Request restriction of processing in certain circumstances</li>
                 </ul>
                 <p className="text-muted-foreground leading-relaxed mt-4">
-                  To exercise these rights, please contact us at privacy@prestigeacademy.edu
+                  To exercise these rights, please contact us at privacy@sdconvent.edu
                 </p>
               </div>
             </motion.div>
@@ -298,9 +298,9 @@ const Privacy = () => {
                 If you have any questions about this Privacy Policy or our data practices, please contact us:
               </p>
               <div className="space-y-2 text-muted-foreground">
-                <p><strong>Email:</strong> privacy@prestigeacademy.edu</p>
+                <p><strong>Email:</strong> privacy@sdconvent.edu</p>
                 <p><strong>Phone:</strong> (123) 456-7890</p>
-                <p><strong>Mail:</strong> Prestige Academy, 123 Academic Drive, Cambridge, MA 02138</p>
+                <p><strong>Mail:</strong> S.D. Convent High School, Rajpoot Colony Harpalpur, District Chhatarpur, M.P. 471111</p>
               </div>
             </motion.div>
           </div>

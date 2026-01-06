@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
-import { GraduationCap, MapPin, Phone, Mail, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { MapPin, Phone, Mail, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const quickLinks = [
   { name: "About Us", path: "/about" },
   { name: "Academics", path: "/academics" },
   { name: "Admissions", path: "/admissions" },
+  { name: "Album", path: "/album" },
   { name: "Contact", path: "/contact" },
 ];
 
@@ -17,10 +19,10 @@ const programLinks = [
 
 // Update these URLs with your actual social media profiles
 const socialLinks = [
-  { icon: Facebook, href: "https://www.facebook.com/prestigeacademy", label: "Facebook" },
-  { icon: Twitter, href: "https://twitter.com/prestigeacademy", label: "Twitter" },
-  { icon: Instagram, href: "https://www.instagram.com/prestigeacademy", label: "Instagram" },
-  { icon: Linkedin, href: "https://www.linkedin.com/school/prestige-academy", label: "LinkedIn" },
+  { icon: Facebook, href: "https://www.facebook.com/sdconvent", label: "Facebook" },
+  { icon: Twitter, href: "https://twitter.com/sdconvent", label: "Twitter" },
+  { icon: Instagram, href: "https://www.instagram.com/sdconvent", label: "Instagram" },
+  { icon: Linkedin, href: "https://www.linkedin.com/school/sd-convent", label: "LinkedIn" },
 ];
 
 export function Footer() {
@@ -31,18 +33,20 @@ export function Footer() {
           {/* Brand Section */}
           <div>
             <Link to="/" className="flex items-center gap-3 mb-6">
-              <div className="p-2 rounded-lg bg-accent">
-                <GraduationCap className="h-6 w-6 text-accent-foreground" />
-              </div>
+              <img
+                src={logo}
+                alt="S.D. Convent High School Logo"
+                className="h-12 w-12 object-contain"
+              />
               <div>
                 <span className="font-display text-xl font-bold">
-                  Prestige Academy
+                  S.D. Convent High School
                 </span>
               </div>
             </Link>
             <p className="text-primary-foreground/80 mb-6 leading-relaxed">
-              Nurturing minds, building futures. Since 1965, we have been committed to 
-              academic excellence and the holistic development of every student.
+              Nurturing minds, building futures. We are committed to academic excellence
+              and the holistic development of every student.
             </p>
             <div className="flex gap-4">
               {socialLinks.map((social) => (
@@ -101,8 +105,8 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-accent mt-0.5" />
                 <span className="text-primary-foreground/80">
-                  123 Academic Drive<br />
-                  Cambridge, MA 02138
+                  Rajpoot Colony Harpalpur<br />
+                  District Chhatarpur, M.P. 471111
                 </span>
               </li>
               <li className="flex items-center gap-3">
@@ -113,8 +117,8 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-accent" />
-                <a href="mailto:info@prestigeacademy.edu" className="text-primary-foreground/80 hover:text-accent transition-colors">
-                  info@prestigeacademy.edu
+                <a href="mailto:info@sdconvent.edu" className="text-primary-foreground/80 hover:text-accent transition-colors">
+                  info@sdconvent.edu
                 </a>
               </li>
             </ul>
@@ -125,7 +129,7 @@ export function Footer() {
         <div className="mt-12 pt-8 border-t border-primary-foreground/20">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-primary-foreground/60 text-sm">
-              © {new Date().getFullYear()} Prestige Academy. All rights reserved.
+              © {new Date().getFullYear()} S.D. Convent High School. All rights reserved.
             </p>
             <div className="flex gap-6 text-sm">
               <Link to="/privacy" className="text-primary-foreground/60 hover:text-accent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm px-2 py-1">
